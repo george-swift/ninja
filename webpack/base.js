@@ -37,7 +37,7 @@ module.exports = {
       WEBGL_RENDERER: JSON.stringify(true)
     }),
     new HtmlWebpackPlugin({
-      title: "Ninja 2D"
+      template: 'src/template.html'
     }),
     new MiniCssExtractPlugin(),
   ]
