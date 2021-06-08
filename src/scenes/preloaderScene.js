@@ -81,6 +81,9 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('background', '../src/assets/images/background.png');
     this.load.image('star', '../src/assets/images/star.png');
     this.load.image('ground', '../src/assets/images/tile.png');
+    this.load.image('higherGround', '../src/assets/images/tile-2.png');
+    this.load.image('higherGroundLeft', '../src/assets/images/tile-3.png');
+    this.load.image('bomb', '../src/assets/images/bomb.png');
 
     this.load.spritesheet('ninja', '../src/assets/images/ninja.png', { frameWidth: 32, frameHeight: 48 });
   }
