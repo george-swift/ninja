@@ -2,6 +2,7 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const dotenv = require('dotenv');
 
 module.exports = {
   mode: 'development',
@@ -36,6 +37,7 @@ module.exports = {
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),
       WEBGL_RENDERER: JSON.stringify(true),
+      'process.env': JSON.stringify(dotenv.config().parsed),
     }),
     new HtmlWebpackPlugin({
       template: 'src/template.html',
