@@ -22,6 +22,8 @@ const eltBuilder = (name, attrs, ...children) => {
   return dom;
 };
 
+const sortByKata = (data) => data.sort((ninja1, ninja2) => ninja2.score - ninja1.score);
+
 const storeKata = (kata) => {
   const total = JSON.stringify(kata);
   localStorage.setItem('kata', total);
@@ -37,6 +39,7 @@ export {
   inputValidator,
   checkField,
   eltBuilder,
+  sortByKata,
   storeKata,
   retrieveKata,
 };
