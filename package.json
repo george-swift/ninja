@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "jest": {
+    "verbose": true,
     "transform": {
       "^.+\\.[t|j]sx?$": "babel-jest"
     }
