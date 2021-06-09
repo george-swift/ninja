@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import Ninja from '../assets/images/ninja2D.png';
 
 export default class BootScene extends Phaser.Scene {
   constructor() {
@@ -6,7 +7,7 @@ export default class BootScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('logo', './assets/images/ninja2D.png');
+    this.load.image('logo', Ninja);
   }
 
   create() {

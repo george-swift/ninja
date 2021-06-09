@@ -1,4 +1,16 @@
 import Phaser from 'phaser';
+import blueBtn1 from '../assets/ui/blue_button02.png';
+import blueBtn2 from '../assets/ui/blue_button03.png';
+import greyBox from '../assets/ui/grey_box.png';
+import checkBox from '../assets/ui/blue_boxCheckmark.png';
+import background from '../assets/images/background.png';
+import star from '../assets/images/star.png';
+import tile from '../assets/images/tile.png';
+import tile2 from '../assets/images/tile-2.png';
+import tile3 from '../assets/images/tile-3.png';
+import bomb from '../assets/images/bomb.png';
+import ninja from '../assets/images/ninja.png';
+import themesong from '../assets/audio/LivelyMeadow.mp3';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -72,20 +84,20 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.timedEvent = this.time.delayedCall(1800, this.ready, [], this);
 
-    this.load.audio('bgMusic', ['assets/audio/LivelyMeadow.mp3']);
+    this.load.audio('bgMusic', [themesong]);
 
-    this.load.image('blueButton1', './assets/ui/blue_button02.png');
-    this.load.image('blueButton2', './assets/ui/blue_button03.png');
-    this.load.image('greyBox', './assets/ui/grey_box.png');
-    this.load.image('checkedBox', './assets/ui/blue_boxCheckmark.png');
-    this.load.image('background', './assets/images/background.png');
-    this.load.image('star', './assets/images/star.png');
-    this.load.image('ground', './assets/images/tile.png');
-    this.load.image('higherGround', './assets/images/tile-2.png');
-    this.load.image('higherGroundLeft', './assets/images/tile-3.png');
-    this.load.image('bomb', './assets/images/bomb.png');
+    this.load.image('blueButton1', blueBtn1);
+    this.load.image('blueButton2', blueBtn2);
+    this.load.image('greyBox', greyBox);
+    this.load.image('checkedBox', checkBox);
+    this.load.image('background', background);
+    this.load.image('star', star);
+    this.load.image('ground', tile);
+    this.load.image('higherGround', tile2);
+    this.load.image('higherGroundLeft', tile3);
+    this.load.image('bomb', bomb);
 
-    this.load.spritesheet('ninja', './assets/images/ninja.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('ninja', ninja, { frameWidth: 32, frameHeight: 48 });
 
     this.load.plugin('rexgridtableplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexgridtableplugin.min.js', true);
   }
