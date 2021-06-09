@@ -72,20 +72,20 @@ export default class PreloaderScene extends Phaser.Scene {
 
     this.timedEvent = this.time.delayedCall(1800, this.ready, [], this);
 
-    this.load.audio('bgMusic', ['../src/assets/audio/LivelyMeadow.mp3']);
+    this.load.audio('bgMusic', ['assets/audio/LivelyMeadow.mp3']);
 
-    this.load.image('blueButton1', '../src/assets/ui/blue_button02.png');
-    this.load.image('blueButton2', '../src/assets/ui/blue_button03.png');
-    this.load.image('greyBox', '../src/assets/ui/grey_box.png');
-    this.load.image('checkedBox', '../src/assets/ui/blue_boxCheckmark.png');
-    this.load.image('background', '../src/assets/images/background.png');
-    this.load.image('star', '../src/assets/images/star.png');
-    this.load.image('ground', '../src/assets/images/tile.png');
-    this.load.image('higherGround', '../src/assets/images/tile-2.png');
-    this.load.image('higherGroundLeft', '../src/assets/images/tile-3.png');
-    this.load.image('bomb', '../src/assets/images/bomb.png');
+    this.load.image('blueButton1', 'assets/ui/blue_button02.png');
+    this.load.image('blueButton2', 'assets/ui/blue_button03.png');
+    this.load.image('greyBox', 'assets/ui/grey_box.png');
+    this.load.image('checkedBox', 'assets/ui/blue_boxCheckmark.png');
+    this.load.image('background', 'assets/images/background.png');
+    this.load.image('star', 'assets/images/star.png');
+    this.load.image('ground', 'assets/images/tile.png');
+    this.load.image('higherGround', 'assets/images/tile-2.png');
+    this.load.image('higherGroundLeft', 'assets/images/tile-3.png');
+    this.load.image('bomb', 'assets/images/bomb.png');
 
-    this.load.spritesheet('ninja', '../src/assets/images/ninja.png', { frameWidth: 32, frameHeight: 48 });
+    this.load.spritesheet('ninja', 'assets/images/ninja.png', { frameWidth: 32, frameHeight: 48 });
 
     this.load.plugin('rexgridtableplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexgridtableplugin.min.js', true);
   }

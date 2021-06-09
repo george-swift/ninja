@@ -6,7 +6,7 @@ export default class BootScene extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image('logo', '../src/assets/images/ninja2D.png');
+    this.load.image('logo', 'assets/images/ninja2D.png');
   }
 
   create() {
