@@ -21,7 +21,7 @@ const createNinja2D = async () => {
 };
 
 const uploadKata = async (ninja, kata) => {
-  const params = {
+  const data = {
     user: ninja,
     score: kata,
   };
@@ -32,7 +32,7 @@ const uploadKata = async (ninja, kata) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(params),
+    body: JSON.stringify(data),
   };
 
   const response = await fetch(url, options);
