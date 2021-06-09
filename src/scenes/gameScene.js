@@ -120,10 +120,11 @@ export default class GameScene extends Phaser.Scene {
   damage() {
     this.gameOver = true;
     storeKata(this.score);
+    this.score = 0;
     this.physics.pause();
     this.ninja.setTint(0xff0000);
     this.ninja.anims.play('turn');
-    this.time.delayedCall(1800, this.switchScenes, [], this);
+    this.time.delayedCall(1500, this.switchScenes, [], this);
   }
 
   update() {
@@ -156,7 +157,6 @@ export default class GameScene extends Phaser.Scene {
   switchScenes() {
     if (this.gameOver === true) {
       this.scene.start('GameOver');
-      this.scene.remove('Game');
     }
   }
 }
