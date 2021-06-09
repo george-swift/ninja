@@ -1,29 +1,30 @@
-const merge = require("webpack-merge");
-const path = require("path");
-const base = require("./base");
-const TerserPlugin = require("terser-webpack-plugin");
+/* eslint-disable import/no-extraneous-dependencies */
+const { merge } = require('webpack-merge');
+const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
+const base = require('./base.js');
 
 module.exports = merge(base, {
-  mode: "production",
+  mode: 'production',
   output: {
+    filename: 'bundle.min.js',
     path: path.resolve(__dirname, 'dist'),
-    filename: "bundle.min.js",
     assetModuleFilename: 'images/[hash][ext][query]',
   },
   devtool: false,
   performance: {
-    maxEntrypointSize: 900000,
-    maxAssetSize: 900000
+    maxEntrypointSize: 1200000,
+    maxAssetSize: 1200000,
   },
   optimization: {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
           output: {
-            comments: false
-          }
-        }
-      })
-    ]
-  }
+            comments: false,
+          },
+        },
+      }),
+    ],
+  },
 });
