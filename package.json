@@ -48,6 +48,7 @@
     "dotenv": "^10.0.0",
     "node-fetch": "^2.6.1",
     "phaser": "^3.55.2",
+    "phaser3-rex-plugins": "^1.1.51",
     "regenerator-runtime": "^0.13.7"
   }
 }
