@@ -1,6 +1,5 @@
 import Phaser from 'phaser';
 import config from '../config/config.js';
-import Button from '../system/object.js';
 import {
   inputValidator,
   eltBuilder,
@@ -30,16 +29,6 @@ export default class GameOverScene extends Phaser.Scene {
     });
 
     this.add.image(400, 255, 'ninja');
-
-    this.menuButton = new Button(
-      this,
-      config.width / 2,
-      config.height * 0.9,
-      'blueButton1',
-      'blueButton2',
-      'Menu',
-      'Title',
-    );
 
     const div = eltBuilder('div',
       { class: 'userAction', id: 'input-fields' },
