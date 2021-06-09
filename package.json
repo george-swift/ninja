@@ -54,6 +54,7 @@
   "dependencies": {
     "bootstrap": "^5.0.1",
     "dotenv": "^10.0.0",
+    "file-loader": "^6.2.0",
     "node-fetch": "^2.6.1",
     "phaser": "^3.55.2",
     "phaser3-rex-plugins": "^1.1.51",
