@@ -3,7 +3,7 @@
 */
 
 import * as test from '../src/helpers/reusables.js';
-import * as mock from '../__mocks__/storage-test.js';
+import * as mock from '../__mocks__/mock-storage.js';
 
 describe('Generates random numbers between two given integers', () => {
   it('returns random between 10 and 15', () => {
