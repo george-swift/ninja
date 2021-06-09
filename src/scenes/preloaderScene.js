@@ -10,7 +10,7 @@ import tile2 from '../assets/images/tile-2.png';
 import tile3 from '../assets/images/tile-3.png';
 import bomb from '../assets/images/bomb.png';
 import ninja from '../assets/images/ninja.png';
-import themesong from '../assets/audio/LivelyMeadow.mp3';
+import themesong from '../assets/audio/8-Bit-Ninja.mp3';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -82,7 +82,7 @@ export default class PreloaderScene extends Phaser.Scene {
       this.ready();
     });
 
-    this.timedEvent = this.time.delayedCall(1800, this.ready, [], this);
+    this.timedEvent = this.time.delayedCall(1300, this.ready, [], this);
 
     this.load.audio('bgMusic', [themesong]);
 
