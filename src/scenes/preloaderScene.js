@@ -86,6 +86,8 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('bomb', '../src/assets/images/bomb.png');
 
     this.load.spritesheet('ninja', '../src/assets/images/ninja.png', { frameWidth: 32, frameHeight: 48 });
+
+    this.load.plugin('rexgridtableplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexgridtableplugin.min.js', true);
   }
 
   ready() {
