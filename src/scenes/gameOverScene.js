@@ -73,7 +73,7 @@ export default class GameOverScene extends Phaser.Scene {
         this.playerName = playerName.value;
         this.upload = uploadKata(this.playerName, totalKata);
         this.upload.then((info) => {
-          this.notice = this.add.text(225, 355, `${info.result}`, {
+          this.notice = this.add.text(200, 355, `${info.result}..`, {
             fontSize: '24px',
             fill: '#fff',
             fontFamily: 'Mate SC',
@@ -88,6 +88,6 @@ export default class GameOverScene extends Phaser.Scene {
   }
 
   showLeaderBoard() {
-    this.scene.remove('GameOver');
+    this.scene.start('LeaderBoard');
   }
 }
