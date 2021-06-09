@@ -1,4 +1,5 @@
 import 'regenerator-runtime/runtime.js';
+import { sortByKata } from '../helpers/reusables.js';
 
 const fetch = require('node-fetch');
 
@@ -16,7 +17,6 @@ const createNinja2D = async () => {
 
   const response = await fetch(url, options);
   const identifier = await response.json();
-
   return identifier;
 };
 
@@ -40,7 +40,21 @@ const uploadKata = async (ninja, kata) => {
   return result;
 };
 
+const getRankings = async () => {
+  const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${process.env.GAME_ID}/scores/`;
+  const options = {
+    method: 'GET',
+    mode: 'cors',
+    headers: { 'Content-Type': 'application/json' },
+  };
+
+  const response = await fetch(url, options);
+  const data = await response.json();
+  return sortByKata(data.result);
+};
+
 export {
   createNinja2D,
   uploadKata,
+  getRankings,
 };
