@@ -38,6 +38,7 @@ Ninja 2d is a platform game created with the Phaser 3 library. On first visit, t
 Ninja 2d is deployed to Netlify and a unique identifier was allocated from the Leaderboard API backend after creating the game. However, to manage locally, follow these steps:
 - Clone this project by running `git clone https://github.com/george-swift/ninja.git` in a desired directory
 - `cd` into the directory of the cloned project and run `npm install` to install required dependencies
+- Create a `.env` file in the root directory with the following content `GAME_ID=QQUigteP76PAUEtOsMwy` and save it.
 - Automation scripts are included in the package file to ease development. Each build stage was tested using the Jest test framework. Run `npm test` to get a verbose report of individual test executions.
 - If all tests pass, run `npm start` to fire up a local server with live reloading.
 - If not already redirected, visit `http://localhost:8080/` in your browser to access Ninja 2d from your server.
