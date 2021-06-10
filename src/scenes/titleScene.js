@@ -2,6 +2,7 @@
 import Phaser from 'phaser';
 import Button from '../system/object.js';
 import config from '../config/config.js';
+import { randomTip } from '../helpers/reusables.js';
 
 export default class TitleScene extends Phaser.Scene {
   constructor() {
@@ -9,6 +10,12 @@ export default class TitleScene extends Phaser.Scene {
   }
 
   create() {
+    this.info = this.add.text(180, 80, `📜 \u00A0 ${randomTip()}`, {
+      fontSize: '20px',
+      fill: '#fff',
+      fontFamily: 'Mate SC',
+    });
+
     this.gameButton = new Button(
       this,
       config.width / 2,
@@ -29,10 +36,20 @@ export default class TitleScene extends Phaser.Scene {
       'Options',
     );
 
-    this.creditsButton = new Button(
+    this.leaderBoardButton = new Button(
       this,
       config.width / 2,
       config.height / 2 + 100,
+      'blueButton1',
+      'blueButton2',
+      'Rankings',
+      'LeaderBoard',
+    );
+
+    this.creditsButton = new Button(
+      this,
+      config.width / 2,
+      config.height / 2 + 200,
       'blueButton1',
       'blueButton2',
       'Credits',

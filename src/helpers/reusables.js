@@ -1,5 +1,18 @@
 const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
+const randomTip = () => {
+  const tips = [
+    'Press the ⬆️ arrow key twice to double jump',
+    'The enemy sends more bombs with each level up',
+    'Collect all fallen stars to a unlock new level',
+    'Bombs are even faster when you reach 250 kata',
+    'Check the rankings to see how your ninja compares',
+    'Pause and take a breather if it gets too much',
+  ];
+
+  return tips[randomInt(0, 5)];
+};
+
 const inputValidator = (field) => {
   const rex = /\d+|\w+/;
   return !!rex.exec(field.value);
@@ -36,6 +49,7 @@ const retrieveKata = () => {
 
 export {
   randomInt,
+  randomTip,
   inputValidator,
   checkField,
   eltBuilder,
