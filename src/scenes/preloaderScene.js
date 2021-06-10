@@ -12,6 +12,8 @@ import tile3 from '../assets/images/tile-3.png';
 import bomb from '../assets/images/bomb.png';
 import ninja from '../assets/images/ninja.png';
 import themesong from '../assets/audio/8-Bit-Ninja.mp3';
+import pause from '../assets/images/pause.png';
+import play from '../assets/images/play.png';
 
 export default class PreloaderScene extends Phaser.Scene {
   constructor() {
@@ -97,6 +99,8 @@ export default class PreloaderScene extends Phaser.Scene {
     this.load.image('higherGround', tile2);
     this.load.image('higherGroundLeft', tile3);
     this.load.image('bomb', bomb);
+    this.load.image('pause', pause);
+    this.load.image('resume', play);
 
     this.load.spritesheet('ninja', ninja, { frameWidth: 32, frameHeight: 48 });
 

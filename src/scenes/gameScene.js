@@ -2,6 +2,7 @@
 import Phaser from 'phaser';
 import { defyPhysics, reverseMotion } from '../helpers/phaserTricks.js';
 import { randomInt, storeKata } from '../helpers/reusables.js';
+import Button from '../system/object.js';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -23,6 +24,35 @@ export default class GameScene extends Phaser.Scene {
       fontSize: '28px',
       fill: '#18983f',
       fontFamily: 'Mate SC',
+    });
+
+    this.standOut = this.add.text(320, 300, 'Game Paused', {
+      backgroundColor: '#eef1ef',
+      fontSize: '28px',
+      fill: '#18983f',
+      fontFamily: 'Mate SC',
+    });
+
+    this.standOut.setVisible(false);
+
+    this.timeOut = this.add.image(750, 37, 'pause').setInteractive();
+    this.timeOut.on('pointerdown', () => {
+      this.physics.pause();
+      this.standOut.setVisible(true);
+      this.timeOut.setVisible(false);
+      this.play.setVisible(true);
+      this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+    });
+
+    this.play = this.add.image(750, 37, 'resume').setInteractive();
+    this.play.setVisible(false);
+
+    this.play.on('pointerdown', () => {
+      this.menuButton.destroy();
+      this.physics.resume();
+      this.standOut.setVisible(false);
+      this.timeOut.setVisible(true);
+      this.play.setVisible(false);
     });
   }
 
@@ -81,7 +111,7 @@ export default class GameScene extends Phaser.Scene {
   createStars() {
     this.stars = this.physics.add.group({
       key: 'star',
-      repeat: randomInt(10, 15),
+      repeat: randomInt(15, 20),
       setXY: { x: 12, y: 0, stepX: 70 },
     });
 
@@ -116,6 +146,8 @@ export default class GameScene extends Phaser.Scene {
       this.physics.add.collider(this.bombs, this.movingPlatform2);
       this.physics.add.collider(this.ninja, this.bombs, this.damage, null, this);
     }
+
+    if (this.score > 250) this.bombs.setBounce(1);
   }
 
   damage() {
