@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import 'regenerator-runtime/runtime.js';
 import { sortByKata } from '../helpers/reusables.js';
 

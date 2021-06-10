@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import Ninja from '../assets/images/ninja2D.png';
 

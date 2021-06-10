@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import blueBtn1 from '../assets/ui/blue_button02.png';
 import blueBtn2 from '../assets/ui/blue_button03.png';

@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import { defyPhysics, reverseMotion } from '../helpers/phaserTricks.js';
 import { randomInt, storeKata } from '../helpers/reusables.js';

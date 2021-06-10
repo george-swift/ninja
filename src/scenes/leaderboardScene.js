@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unresolved */
 import Phaser from 'phaser';
 import { getRankings } from '../system/api.js';
 import Button from '../system/object.js';
