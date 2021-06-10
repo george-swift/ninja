@@ -23,7 +23,7 @@ describe('Mock implementation of uploading validated input to API service', () =
     });
   });
 
-  it('requests rankings from API service and returns a sorted list', () => mockUpload(asyncTest.url, asyncTest.params, 'Demo', 5)
+  it("can submit a player's score to the API service after a game", () => mockUpload(asyncTest.url, asyncTest.params, 'Demo', 5)
     .then((response) => {
       expect(asyncTest.params.method).toMatch('POST');
       expect(isFetchCalled).not.toBeFalsy();
