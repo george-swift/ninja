@@ -12,3 +12,23 @@ body {
   width: 250px;
 }
 
+.canvas-sibling {
+  display: block;
+  width: 800px;
+  height: 600px;
+  padding: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  position: absolute;
+  overflow: hidden;
+  pointer-events: none;
+  transform: scale(1, 1);
+  transform-origin: left top;
+}
+
+#canvas {
+  width: 800px;
+  height: 600px;
+  image-rendering: pixelated;
+}
+
