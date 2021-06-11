@@ -1,6 +1,6 @@
 # Ninja 2d
 
-![](./ninja2d.gif)
+![](./gdd/ninja2d.gif)
 
 ## Live Link
 [Click here](https://ninja2d.netlify.app/) to start your quest 🥷🏼
@@ -35,7 +35,7 @@ Ninja 2d is a platform game created with the Phaser 3 library. On first visit, t
 - NPM
 
 ## Getting Started
-Ninja 2d is deployed to Netlify and a unique identifier was allocated from the Leaderboard API backend after creating the game. However, to manage locally, follow these steps:
+[Ninja 2d](https://ninja2d.netlify.app/) is deployed to Netlify and a unique identifier was allocated from the Leaderboard API backend after creating the game. However, to manage locally, follow these steps:
 - Clone this project by running `git clone https://github.com/george-swift/ninja.git` in a desired directory
 - `cd` into the directory of the cloned project and run `npm install` to install required dependencies
 - Create a `.env` file in the root directory with the following content `GAME_ID=QQUigteP76PAUEtOsMwy` and save it.
@@ -51,12 +51,71 @@ Ninja 2d is deployed to Netlify and a unique identifier was allocated from the L
 - Twitter: [@\_\_pragmaticdev](https://twitter.com/__pragmaticdev)
 - GitHub: [@george-swift](https://github.com/george-swift)
 
+## Game Design Documentation
+
+<img src="./gdd/ninja2d.png" width="625" height="500">
+
+### Project scope &nbsp;📐 
+
+**Timeline:**
+* Day 1: Familiarise with API documentation in Phaser 3.55 library
+* Day 2: Game story, character identification and overall design objective
+* Day 3: Test-driven implementation of game logic following design objectives
+* Day 4: Deployment to hosting service
+
+### Gameplay & mechanics &nbsp;⚙️
+
+**Basic Movement**
+
+* Details: The ninja can move left, right, and jump from any platform
+* How it works: Controls for movement is via keyboard left, right, and up arrow keys
+
+**Double Jumps**
+
+* Details: The ninja can perform double jumps from a rest position. This is incredibly useful for avoiding obstacles or navigating moving platforms
+* How it works: Press the UP arrow key twice 
+
+**Levels**
+
+* Details: After all fallen stars are collected, a new level is immediately started and obstacles appear. Difficulty increases with each level
+* How it works: After the first round, bombs appear. When kata is more than 250, bombs bounce higher. Touching a bomb means game over.
+
+**Leaderboard**
+
+<img src="./gdd/rankings.png" width="625" height="500">
+
+* Details: Rankings show the top ten players with the highest kata in Ninja 2d. The Leaderboard API service is integrated with gameplay.
+* How it works: After each game, a player fills in their name to upload their achievements to the backend. 
+
+**👤 Characters**
+* Ninja
+
+**🗺️ Locations**
+* Ninja world
+
+**🏆️ Levels / Mission**
+* ∞ levels
+* Accumulate as much kata as it takes to be the top-ranking ninja
+
+**📦️ Objects**
+* Static and moving platforms
+* Fallen stars
+* Bombs
+
 ## Acknowledgments
 
-- Phaser [library](http://phaser.io/)
-- Background music by [FoxSynergy](https://opengameart.org/content/8-bit-ninja)
-- Platforms from [Game Art](https://www.gameart2d.com/)
+🎨 **Art**
+
+- Platforms and background from [Game Art](https://www.gameart2d.com/)
 - Ninja [spritesheet](https://untamed.wild-refuge.net/images/rpgxp/)
+
+🔊 **Audio**
+
+- Background music by [FoxSynergy](https://opengameart.org/content/8-bit-ninja)
+
+📚 **WebGL**
+- Phaser [library](http://phaser.io/)
+
 
 ## Show your support
 
