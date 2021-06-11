@@ -1,0 +1,63 @@
+{
+  "name": "ninja",
+  "version": "1.0.0",
+  "description": "Ninja 2D game with JS and the Phaser library",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "webpack --config webpack/prod.js",
+    "start": "webpack serve --config webpack/base.js --open",
+    "test": "jest"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/george-swift/ninja.git"
+  },
+  "keywords": [],
+  "author": "Ubong George",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/george-swift/ninja/issues"
+  },
+  "homepage": "https://github.com/george-swift/ninja#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.2",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.2.6",
+    "dotenv-webpack": "^7.0.3",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "hint": "^5.2.3",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.4",
+    "mini-css-extract-plugin": "^1.6.0",
+    "raw-loader": "^4.0.2",
+    "style-loader": "^2.0.0",
+    "stylelint": "^9.3.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.19.0",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.1",
+    "dotenv": "^10.0.0",
+    "file-loader": "^6.2.0",
+    "node-fetch": "^2.6.1",
+    "phaser": "^3.55.2",
+    "phaser3-rex-plugins": "^1.1.51",
+    "regenerator-runtime": "^0.13.7"
+  }
+}
