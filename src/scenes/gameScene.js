@@ -2,7 +2,6 @@
 import Phaser from 'phaser';
 import { defyPhysics, reverseMotion } from '../helpers/phaserTricks.js';
 import { randomInt, storeKata } from '../helpers/reusables.js';
-import Button from '../system/object.js';
 
 export default class GameScene extends Phaser.Scene {
   constructor() {
@@ -41,18 +40,18 @@ export default class GameScene extends Phaser.Scene {
       this.standOut.setVisible(true);
       this.timeOut.setVisible(false);
       this.play.setVisible(true);
-      this.menuButton = new Button(this, 400, 500, 'blueButton1', 'blueButton2', 'Menu', 'Title');
+      this.sys.game.globals.bgMusic.pause();
     });
 
     this.play = this.add.image(750, 37, 'resume').setInteractive();
     this.play.setVisible(false);
 
     this.play.on('pointerdown', () => {
-      this.menuButton.destroy();
       this.physics.resume();
       this.standOut.setVisible(false);
       this.timeOut.setVisible(true);
       this.play.setVisible(false);
+      this.sys.game.globals.bgMusic.resume();
     });
   }
 
